@@ -8,9 +8,11 @@ Everything should be put in the right dir.
 
 Vim folder >> .vim (probably in home dir)
 
-configs/i3config >> .config/i3 (again most likely)
+configs/i3config >> .config/i3/config (again most likely)
 
 configs/vimrc >> .vimrc
+
+configs/config.fish >> .config/fish/config.fish
 
 wall/{stuff} >> ~/Pictures/{stuff}
 
