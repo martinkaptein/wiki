@@ -14,6 +14,8 @@ configs/vimrc >> .vimrc
 
 configs/config.fish >> .config/fish/config.fish
 
+configs/compton.conf >> .config/compton.conf
+
 wall/{stuff} >> ~/Pictures/{stuff}
 
 ## Other stuff
