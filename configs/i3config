@@ -158,6 +158,7 @@ bar {
 # change wall
 # exec_always feh --bg-fill /home/martin/Pictures/edited-solaris.jpg
 exec_always feh --bg-fill /home/martin/Pictures/roerich-himalayas.jpg
+exec_always compton --config ~/.config/compton.conf -b
 
 bindsym $mod+t exec thunar
 bindsym $mod+y exec firefox
