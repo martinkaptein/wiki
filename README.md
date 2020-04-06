@@ -69,3 +69,7 @@ Run:
 `pactl load-module module-loopback latency_msec=1`
 
 Then select in pulse audio volume ctrl under recording input from *Monitor of Built-in ...*.
+
+To unload:
+`pactl unload-module <number>`
+
