@@ -57,3 +57,15 @@ For "normal" word docs use following front matter:
 #### Build command
 
 `pandoc -o output.{pdf,docx,whatever} input.md input2.md etc.`
+
+## Misc
+
+### Internal audio record together with computer audio
+
+Record internal audio **together** with computer audio (monitor)
+Requires Pulseaudio (and ALSA).
+
+Run:
+`pactl load-module module-loopback latency_msec=1`
+
+Then select in pulse audio volume ctrl under recording input from *Monitor of Built-in ...*.
