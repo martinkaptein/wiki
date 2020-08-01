@@ -1,6 +1,6 @@
 #!/bin/bash
 cwd=$(pwd)
-cd
+cd ~/Documents/
 path=$(fzf)
 dir=$(dirname "$path")
 echo "$path"

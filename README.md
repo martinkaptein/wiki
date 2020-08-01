@@ -73,3 +73,28 @@ Then select in pulse audio volume ctrl under recording input from *Monitor of Bu
 To unload:
 `pactl unload-module <number>`
 
+### TTY vs Graphical
+
+#### Boot by default
+
+ On systemd system
+
+- To Graphical
+
+`systemctl set-default multi-user.target`
+
+- To Graphical
+
+`systemctl set-default graphical.target`
+
+#### Switch to TTY only (from graphical)
+
+`systemctl start multi-user.target`
+
+#### Switching back to graphical
+
+`systemctl start graphical.target`
+
+### Check battery
+
+`acpi`
