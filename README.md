@@ -98,3 +98,29 @@ To unload:
 ### Check battery
 
 `acpi`
+
+### Encryption of removable media
+
+#### Encryption setup
+
+`sudo cryptsetup luksFormat /dev/sdb`
+
+#### Opening
+
+`sudo cryptsetup luksOpen /dev/sdb cryptUSB`
+
+(now use `/dev/mapper/`)
+
+#### Formatting
+
+`sudo mkfs.ext4 /dev/mapper/cryptUSB`
+
+#### Mounting
+
+`sudo mount /dev/mapper/cryptUSB /media/cryptUSB`
+
+#### Closing
+
+(umount)
+
+`sudo cryptsetup close /dev/mapper/cryptUSB`
