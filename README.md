@@ -124,3 +124,13 @@ To unload:
 (umount)
 
 `sudo cryptsetup close /dev/mapper/cryptUSB`
+
+### NVIM
+
+Inside nvim config dir add to init.vim:
+(If using nvim)
+```
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath=&runtimepath
+source ~/.vimrc
+``` 
