@@ -58,6 +58,8 @@ For "normal" word docs use following front matter:
 
 `pandoc -o output.{pdf,docx,whatever} input.md input2.md etc.`
 
+`pandoc -o output.pdf input.md --pdf-engine=xelatex -V mainfont='Ubuntu'
+
 ## Misc
 
 ### Internal audio record together with computer audio
