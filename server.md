@@ -42,6 +42,8 @@ In /etc/ngnix/sites-avaiable/stuff:
 
 Configure:
 
+Remove default_server after listen.
+
 ```
 root /var/sites/sonata8/public/;
 
