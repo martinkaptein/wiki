@@ -89,3 +89,7 @@ Server reboot/restart: `sudo reboot`
 ## Domain stuff
 
 3 A recordings from {@;{star};www} pointing to ipv4, the same but AAAA records pointing to ipv6.
+
+## Certbot wildcard cert
+
+`certbot certonly --manual --preferred-challenges=dns --email martin@martinkaptein.com --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d "*.sonata8.com"`
