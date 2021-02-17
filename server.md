@@ -61,6 +61,11 @@ if ($host = 'www.sonata8.com') {
 	return 301 https://sonata8.com$request_uri;
 }
 
+location ~* \.(js|css|png|jpg|jpeg|gif|svg|ico|pdf)$ {
+expires 2d;
+add_header Cache-Control "public, no-transform";
+}
+
 ```
 
 To enable run:
