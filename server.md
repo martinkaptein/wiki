@@ -63,8 +63,19 @@ if ($host = 'www.sonata8.com') {
 
 location ~* \.(js|css|png|jpg|jpeg|gif|svg|ico|pdf)$ {
 expires 2d;
-add_header Cache-Control "public, no-transform";
+add_header Cache-Control "public";
 }
+
+location ~* \.(js|css|png|jpg|jpeg|gif|svg|ico)$ {
+expires 33d;
+}
+
+add_header Content-Security-Policy "default-src 'self';";
+add_header X-Frame-Options "SAMEORIGIN";
+add_header X-XSS-Protection "1; mode=block";
+add_header X-Content-Type-Options nosniff;
+add_header 'Referrer-Policy' 'strict-origin';
+add_header Strict-Transport-Security 'max-age=31536000; includeSubDomains; preload' always;
 
 ```
 
