@@ -70,7 +70,7 @@ location ~* \.(js|css|png|jpg|jpeg|gif|svg|ico)$ {
 expires 33d;
 }
 
-add_header Content-Security-Policy "default-src 'self';";
+add_header Content-Security-Policy "default-src 'self' *.exception.com;";
 add_header X-Frame-Options "SAMEORIGIN";
 add_header X-XSS-Protection "1; mode=block";
 add_header X-Content-Type-Options nosniff;
