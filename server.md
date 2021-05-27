@@ -109,3 +109,11 @@ Server reboot/restart: `sudo reboot`
 ## Certbot wildcard cert
 
 `certbot certonly --manual --preferred-challenges=dns --email martin@martinkaptein.com --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d "*.sonata8.com"`
+
+## Local Ubuntu server disk resizing
+
+lsblk to confirm situation.
+
+```
+sudo lvextend /dev/ubuntu-vg/ubuntu-lv /dev/sda3
+```
