@@ -117,3 +117,7 @@ lsblk to confirm situation.
 ```
 sudo lvextend /dev/ubuntu-vg/ubuntu-lv /dev/sda3
 ```
+
+## Locale error
+
+`export LC_ALL=C`
