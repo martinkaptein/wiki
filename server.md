@@ -93,6 +93,38 @@ Enter below:
 
 `1 1 1 * * certbot renew`
 
+## Prosody (XMPP)
+
+```
+apt install prosody
+```
+
+Add admin in `/etc/prosody/prosody.cfg.lua`
+
+`admins = { "chad@example.org" }`
+
+Set server URL/Domain in the `VirtualHost` param.
+
+Add certificate (assuming you already created one):
+
+```
+prosodyctl --root cert import /etc/letsencrypt/live/
+```
+
+Add user:
+
+```
+prosodyctl adduser chad@example.org
+```
+
+Make sure registration disabled!
+
+Restart:
+
+```
+systemctl restart prosody
+```
+
 ## Cosmetic
 
 Vi Mode in bash: `set -o vi` >> .bashrc
