@@ -61,12 +61,12 @@ if ($host = 'www.sonata8.com') {
 	return 301 https://sonata8.com$request_uri;
 }
 
-location ~* \.(js|css|png|jpg|jpeg|gif|svg|ico|pdf)$ {
-expires 2d;
+location ~* \.(js|css|png|jpg|jpeg|gif|svg|ico|pdf|woff2)$ {
+expires 7d;
 add_header Cache-Control "public";
 }
 
-location ~* \.(js|css|png|jpg|jpeg|gif|svg|ico)$ {
+location ~* \.(js|css|png|jpg|jpeg|gif|svg|ico|woff2)$ {
 expires 33d;
 }
 
@@ -77,6 +77,14 @@ add_header X-Content-Type-Options nosniff;
 add_header 'Referrer-Policy' 'strict-origin';
 add_header Strict-Transport-Security 'max-age=31536000; includeSubDomains; preload' always;
 
+```
+
+Add HTTP2 (workaround for now):
+
+```
+listen [::]:443 http2 ssl; # managed by Certbot
+listen 443 http2 ssl; # managed by Certbot
+ssl_certificate /etc/letsencrypt/live/kaptein.me/fullchain.pem; # managed...
 ```
 
 To enable run:
