@@ -12,3 +12,4 @@
 (display-battery-mode 1)
 (setq sentence-end-double-space nil)
 (global-display-line-numbers-mode)
+(put 'dired-find-alternate-file 'disabled nil)
