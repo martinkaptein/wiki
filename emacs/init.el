@@ -38,3 +38,9 @@
 (delete-other-windows)
 
 ;; keys
+;; ctrl c + a (selection)
+;; j > jump
+;; ctrl c + ctrl s (schedule)
+;; ctrl x + ctrl s (save)
+;; f,b (forward, back)
+;; v (view)
