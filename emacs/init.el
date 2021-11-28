@@ -44,3 +44,4 @@
 ;; ctrl x + ctrl s (save)
 ;; f,b (forward, back)
 ;; v (view)
+;; ctrl c + ctrl t (change todo state)
