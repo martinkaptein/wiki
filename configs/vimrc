@@ -17,7 +17,8 @@ nnoremap <silent> ,b :terminal<CR>
 " Open new tab
 nnoremap <silent> ,t :tabnew<CR>
 " ----------------
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
+set clipboard^=unnamed
 set encoding=utf-8
 hi clear SpellBad
 hi SpellBad cterm=underline
