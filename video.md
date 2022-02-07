@@ -24,4 +24,17 @@ file file2.mp4
 
 ```
 ffmpeg -i "https://stream.m3u8" -c copy output.mkv
+
+```
+
+### Convert
+
+```
+ffmpeg -i input.ext output.ext
+```
+
+Fancy mp3:
+
+```
+ffmpeg -i input.flac -ab 320k -map_metadata 0 -id3v2_version 3 output.mp3
 ```
