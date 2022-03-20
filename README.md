@@ -136,3 +136,11 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 source ~/.vimrc
 ``` 
+
+### UFW firewall for personal use (pc/laptop)
+
+```
+ufw enable
+ufw default deny incoming
+ufw default allow outgoing
+```
