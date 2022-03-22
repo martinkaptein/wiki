@@ -33,6 +33,7 @@ Restart: `systemctl restart networking`
 - nginx
 - certbot
 - python3-certbot-nginx
+- fail2ban
 
 ### Nginx
 
