@@ -162,3 +162,23 @@ sudo lvextend /dev/ubuntu-vg/ubuntu-lv /dev/sda3
 ## Locale error
 
 `export LC_ALL=C`
+
+## SSHFS (SSH Filesystem)
+
+For key auth:
+
+create `.ssh/config`:
+
+```
+Host hostname
+     HostName hostname
+     User username
+     Port 22
+     IdentityFile /home/whatever/.ssh/id_rsa
+```
+
+Connect:
+
+```
+sshfs username@hostname:/path/ mountpoint
+```
