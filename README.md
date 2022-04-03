@@ -144,3 +144,9 @@ ufw enable
 ufw default deny incoming
 ufw default allow outgoing
 ```
+
+### Redshift
+
+```
+redshift -l 52.3779:4.8970
+```
