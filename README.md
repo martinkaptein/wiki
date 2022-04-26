@@ -129,7 +129,7 @@ To unload:
 
 ### NVIM
 
-Inside nvim config dir add to init.vim:
+Inside nvim config dir (~/.config/nvim/init.vim) add to init.vim:
 (If using nvim)
 ```
 set runtimepath^=~/.vim runtimepath+=~/.vim/after

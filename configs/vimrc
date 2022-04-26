@@ -14,10 +14,14 @@ nnoremap <silent> ,<space> :Explore<CR>
 nnoremap <silent> ,v :Lex<CR>
 " Launch terminal (letter b > bash)
 nnoremap <silent> ,b :terminal<CR>
+" exit vim term with ESC
+tnoremap <Esc> <C-\><C-n>
 " Open new tab
 nnoremap <silent> ,t :tabnew<CR>
 " ----------------
+"  For macos:
 " set clipboard=unnamedplus
+"  For Linux:
 set clipboard^=unnamed
 set encoding=utf-8
 hi clear SpellBad
