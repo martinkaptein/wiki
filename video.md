@@ -38,3 +38,15 @@ Fancy mp3:
 ```
 ffmpeg -i input.flac -ab 320k -map_metadata 0 -id3v2_version 3 output.mp3
 ```
+
+### Download Audio only
+
+```
+youtube-dl -x --audio-format mp3 url
+```
+
+### Download numbered playlist to audio (mp3).
+
+```
+youtube-dl --extract-audio --audio-format mp3 -o "%(playlist_index)s-%(title)s.%(ext)s" "https://www.youtube.com/watch?v=3PZlve77LAI&list=PLJHAmFz9mLV-CCH7vsG-uOdDUY4Z7iSGW" --playlist-start 30
+```
