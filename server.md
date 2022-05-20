@@ -71,7 +71,7 @@ location ~* \.(js|css|png|jpg|jpeg|gif|svg|ico|woff2)$ {
 expires 33d;
 }
 
-add_header Content-Security-Policy "default-src 'self' *.exception.com;";
+add_header Content-Security-Policy "default-src 'self' 'sha256-HE52nGYAuxVG6bOcvE5Tg1LGW3PsiAonN3nPK/hmRug=' *.exception.com;";
 add_header X-Frame-Options "SAMEORIGIN";
 add_header X-XSS-Protection "1; mode=block";
 add_header X-Content-Type-Options nosniff;
