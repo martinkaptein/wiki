@@ -1,31 +1,28 @@
+# MacOS
+
 Software:
 
 - homebrew
 - keepassxc
 
-# Homebrew
+## Homebrew
 
-normal:
+### CLI
 
-pandoc gnupg neovim gdrive fish
+```
+fish gnupg git wget transmission-cli pandoc ffmpeg go yt-dlp fzf neovim
+```
 
-cask:
+### Cask
 
-musescore brave iterm2 rectangle caffeine android-file-transfer transmission keepassxc basictex git
+```
+brave-browser keepassxc iterm2 rectangle spotify mpv vlc basictex lulu musescore caffeine android-platform-tools aldente
+```
 
-`brew install:`
+## Configure
 
-gnupg
 `brew analytics off`
 
+`cp configs/config.fish ~/.config/fish/`
 
-Useful commands for OSX Terminal:
- 
-- diskutil list
-- defaults write com.apple.finder AppleShowAllFiles TRUE
-- killall Finder / Dock (or kill Finder / Dock) 
-- defaults write com.apple.screencapture location ~/Pictures/
-- killall SystemUIServer
-- defaults write com.apple.dock autohide-delay -float 1 (or 1.5 for example)
-- chflags hidden /path/to/file-or-folder
-- chflags nohidden /path/to/file-or-folder
+Intel Mac Brew: /usr/local/Cellar/
