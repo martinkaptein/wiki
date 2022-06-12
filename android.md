@@ -18,5 +18,5 @@ acc
 init termux storage
 
 ```
-vim
+vim, git, rsync
 ```
