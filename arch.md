@@ -1,5 +1,17 @@
 # Arch notes
 
+## Sudo
+
+`/etc/sudoers`
+
+```
+username ALL=(ALL:ALL) ALL
+```
+
+## Wireless
+
+Use IWCTL
+
 ## Bluetooth
 
 ```
