@@ -47,3 +47,16 @@ cp configs/alacritty.yml ~/.config/alacritty/
 
 systemctl enable cups.service
 systemctl start cups.service
+
+## i3
+
+mkdir ~/.config/i3
+cp configs/i3config ~/.config/i3/config
+
+## Wallpaper copy
+
+cp wall/8.png ~/8.png
+
+## TLP
+
+tlp start
