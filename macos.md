@@ -26,3 +26,5 @@ brave-browser keepassxc iterm2 rectangle spotify mpv vlc basictex lulu musescore
 `cp configs/config.fish ~/.config/fish/`
 
 Intel Mac Brew: /usr/local/Cellar/
+
+Hosts ad blcking: /etc/hosts or /private/etc/hosts

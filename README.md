@@ -53,12 +53,51 @@ For "normal" word docs use following front matter:
 
 
 ```
+### Presentations
+
+```
+% Habits
+% John Doe
+% March 22, 2005
+
+# In the morning
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Breakfast
+
+- Eat eggs
+- Drink coffee
+
+# In the evening
+
+## Dinner
+
+- Eat spaghetti
+- Drink wine
+
+------------------
+
+![roerich](roerich.png)
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+```
 
 #### Build command
 
 `pandoc -o output.{pdf,docx,whatever} input.md input2.md etc.`
 
-`pandoc -o output.pdf input.md --pdf-engine=xelatex -V mainfont='Ubuntu'
+`pandoc -o output.pdf input.md --pdf-engine=xelatex -V mainfont='Ubuntu'`
+
+`pandoc -t beamer -o beamer.pdf input.md`
+
+`pandoc -t dzslides -s -o output.html input.md`
 
 ## Misc
 
