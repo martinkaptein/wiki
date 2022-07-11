@@ -1,0 +1,8 @@
+# Todo after install
+
+- TLP Config (/etc/tlp.conf) > (both) battery limit, charge limit between 65 and 70 (start/stop limit)
+- `tlp start`
+- UPower (/etc/upower.d) limit disccharge and set shutdown limit
+- SSH Config > Disable Passwd auth
+- Firefox hardening
+- Sudo config

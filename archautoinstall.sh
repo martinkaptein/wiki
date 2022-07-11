@@ -2,7 +2,7 @@
 
 # Update pacman
 
-pacman -Syu --noconfirm
+pacman -Syyu --noconfirm
 
 # Install all required programs from list
 
@@ -29,7 +29,8 @@ cat configs/bashrc >> $HOME/.bashrc
 
 ## fish
 
-cp configs/config.fish $HOME/.config/fish/
+mkdir $HOME/.config/fish
+cp configs/config.fish.arch $HOME/.config/fish/
 fish_vi_key_bindings
 
 ## UFW
@@ -59,4 +60,12 @@ cp wall/8.png ~/8.png
 
 ## TLP
 
+cp configs/tlp.conf /etc/tlp.conf
 tlp start
+
+## PDBX init
+
+mkdir $HOME/pdb
+mkdir $HOME/pdb/bak
+
+## END: Print things to manually take care of:
