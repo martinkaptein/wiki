@@ -7,3 +7,4 @@
 - Firefox hardening
 - Sudo config
 - SSH Keys
+- setup thunderbird
