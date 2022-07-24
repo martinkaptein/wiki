@@ -6,3 +6,4 @@
 - SSH Config > Disable Passwd auth
 - Firefox hardening
 - Sudo config
+- SSH Keys

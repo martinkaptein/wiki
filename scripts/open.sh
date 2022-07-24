@@ -1,6 +1,6 @@
 #!/bin/bash
 cwd=$(pwd)
-cd ~/Documents/
+cd ~/
 path=$(fzf)
 dir=$(dirname "$path")
 echo "$path"
@@ -8,7 +8,7 @@ printf "\n"
 echo "Press 'd' to change directory to" 
 echo "Press 't' to open with GUI explorer" 
 echo "Press 'v' to open with vim" 
-echo "Press 'e' to explore with vim" 
+echo "Press 'e' to explore with ranger" 
 echo "Press 'o' to open with default" 
 echo "Press 'q' to quit"
 while :
@@ -18,7 +18,7 @@ case $a in
 	d* )	cd $dir && exec fish;;
 	t* )	Thunar $dir;;
 	v* )	vim $path;;
-	e* )	vim $dir;;
+	e* )	ranger $dir;;
 	o* )	xdg-open $path;;
 	q* ) 	exit 0;;
 esac
