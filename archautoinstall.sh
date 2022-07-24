@@ -31,6 +31,7 @@ cat configs/bashrc >> $HOME/.bashrc
 
 mkdir $HOME/.config/fish
 cp configs/config.fish.arch $HOME/.config/fish/
+fish
 fish_vi_key_bindings
 
 ## UFW
@@ -60,8 +61,8 @@ cp wall/8.png ~/8.png
 
 ## TLP
 
-cp configs/tlp.conf /etc/tlp.conf
-tlp start
+#cp configs/tlp.conf /etc/tlp.conf
+#tlp start
 
 ## PDBX init
 
