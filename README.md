@@ -52,6 +52,9 @@ For "normal" word docs use following front matter:
 \pagenumbering{arabic}
 
 
+![](image)\ >> image without caption text
+
+\pagebreak
 ```
 
 #### Build command
