@@ -2,11 +2,11 @@
 
 # Update pacman
 
-pacman -Syu --noconfirm
+sudo pacman -Syyu --noconfirm
 
 # Install all required programs from list
 
-cat archlist.txt | xargs pacman -S --noconfirm
+sudo cat archlist.txt | xargs pacman -S --noconfirm
 
 # Configure stuff
 
@@ -29,14 +29,17 @@ cat configs/bashrc >> $HOME/.bashrc
 
 ## fish
 
-cp configs/config.fish $HOME/.config/fish/
+fish
 fish_vi_key_bindings
+exit
+mkdir $HOME/.config/fish
+cp configs/config.fish.arch $HOME/.config/fish/config.fish
 
 ## UFW
 
-ufw enable
-ufw default deny incoming
-ufw default allow outgoing
+sudo ufw enable
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
 
 ## Alacritty
 
@@ -45,8 +48,8 @@ cp configs/alacritty.yml ~/.config/alacritty/
 
 ## Cups
 
-systemctl enable cups.service
-systemctl start cups.service
+sudo systemctl enable cups.service
+sudo systemctl start cups.service
 
 ## i3
 
@@ -59,4 +62,28 @@ cp wall/8.png ~/8.png
 
 ## TLP
 
-tlp start
+#cp configs/tlp.conf /etc/tlp.conf
+#tlp start
+
+## PDBX init
+
+mkdir $HOME/pdb
+mkdir $HOME/pdb/bak
+
+# Prepare other dirs
+
+mkdir ~/arc
+mkdir ~/tmp
+mkdir ~/git
+
+## Bluetooth
+
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+
+## Finder Script
+
+sudo cp scripts/open.sh /usr/local/bin/fzfinder
+sudo chmod +x /usr/local/bin/fzfinder
+
+## END: Print things to manually take care of:
