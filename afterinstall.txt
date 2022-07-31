@@ -5,6 +5,10 @@
 - UPower (/etc/upower.d) limit disccharge and set shutdown limit
 - SSH Config > Disable Passwd auth
 - Firefox hardening
-- Sudo config
 - SSH Keys
 - setup thunderbird
+- fish and fish_vi bindings
+
+# Extra packages
+
+texlive-core autorandr foomatic-db foomatic-db-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds gutenprint foomatic-db-gutenprint-ppds foomatic-db-engine zip unzip xdg-desktop-portal xdg-desktop-portal-gtk

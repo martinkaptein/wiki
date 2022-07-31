@@ -10,6 +10,8 @@ sudo cat archlist.txt | xargs pacman -S --noconfirm
 
 # Configure stuff
 
+mkdir $HOME/.config
+
 ## xorg
 
 touch $HOME/.xinitrc
@@ -24,14 +26,13 @@ cp configs/init.vim ~/.config/nvim/
 
 ## bash
 
+touch $HOME/.profile
 touch $HOME/.bashrc
-cat configs/bashrc >> $HOME/.bashrc
+echo 'fish' >> $HOME/.profile
+echo 'fish' >> $HOME/.bashrc
 
 ## fish
 
-fish
-fish_vi_key_bindings
-exit
 mkdir $HOME/.config/fish
 cp configs/config.fish.arch $HOME/.config/fish/config.fish
 
