@@ -1,3 +1,7 @@
+setxkbmap -option caps:swapescape
+set -Ux EDITOR nvim
+set -Ux VISUAL nvim
+
 alias v="nvim"
 alias l="xbacklight -set"
 alias r="ranger"

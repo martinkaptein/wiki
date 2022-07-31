@@ -1,22 +1,17 @@
 # MacOS
 
-Software:
-
-- homebrew
-- keepassxc
-
 ## Homebrew
 
 ### CLI
 
 ```
-fish gnupg git wget transmission-cli pandoc ffmpeg go yt-dlp fzf neovim
+fish gnupg git wget transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick
 ```
 
 ### Cask
 
 ```
-brave-browser keepassxc iterm2 rectangle spotify mpv vlc basictex lulu musescore caffeine android-platform-tools aldente
+brave-browser keepassxc iterm2 rectangle spotify mpv vlc basictex lulu musescore caffeine android-platform-tools aldente firefox thunderbird
 ```
 
 ## Configure

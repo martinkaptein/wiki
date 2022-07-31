@@ -28,12 +28,13 @@ iface eth0 inet6 static
 ```
 Restart: `systemctl restart networking`
 
-## Server software
+## Server software (ubuntu)
 
 - nginx
 - certbot
 - python3-certbot-nginx
-- fail2ban
+- pandoc
+- texlive-base
 
 ### Nginx
 
@@ -182,3 +183,84 @@ Connect:
 ```
 sshfs username@hostname:/path/ mountpoint
 ```
+
+## Radicale
+
+```
+apt install radicale apache2-utils python3-bcrypt python3-passlib
+```
+
+Check that you have subdomain e.t. sub.domain.com pointing to ipv4 (a) and ipv6 (same as above with *www*)
+
+/etc/radicale/config :
+
+```
+[server]
+# Bind all addresses
+hosts = 0.0.0.0:5232, [::]:5232
+
+[auth]
+type = htpasswd
+htpasswd_filename = /etc/radicale/users
+htpasswd_encryption = plain
+
+[storage]
+filesystem_folder = /var/lib/radicale/collections
+```
+
+Create /etc/radicale/users
+
+```
+username:password
+```
+
+Set user role in /etc/radicale/rights:
+
+```
+[admin]
+user: admin
+collection: .*
+permissions: RWrw
+```
+
+Create another nginx in /etc/ngnix/sites-avaiable/rad
+
+```
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name rad.domain.com;
+    location / {
+        proxy_pass http://localhost:5232/; # The / is important!
+    }
+}
+```
+
+Reload nginx.
+
+Create certbot certificate for it (for the subdomain):
+
+`certbot --nginx`
+
+Create systemd service:
+
+/etc/systemd/system/radicale.service
+
+```
+[Unit]
+Description=A simple CalDAV (calendar) and CardDAV (contact) server
+
+[Service]
+ExecStart= radicale
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+```
+
+```
+systemctl daemon-reload
+systemctl enable --now radicale
+```
+
+Create calendar and address book through web interface.
