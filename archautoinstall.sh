@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir $HOME/.config
+
 # Update pacman
 
 sudo pacman -Syyu --noconfirm
@@ -9,8 +11,6 @@ sudo pacman -Syyu --noconfirm
 sudo cat archlist.txt | xargs pacman -S --noconfirm
 
 # Configure stuff
-
-mkdir $HOME/.config
 
 ## xorg
 

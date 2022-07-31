@@ -1,6 +1,7 @@
 setxkbmap -option caps:swapescape
 set -Ux EDITOR nvim
 set -Ux VISUAL nvim
+set -Ux BROWSER firefox
 
 alias v="nvim"
 alias l="xbacklight -set"
