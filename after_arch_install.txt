@@ -7,6 +7,7 @@
 - Firefox hardening
 - SSH Keys
 - setup thunderbird
+- fix transmission (chown -R transmission: /folder/), or change systemd user
 - fish and fish_vi bindings
 
 # Extra packages
