@@ -8,3 +8,4 @@
 - Sudo config
 - SSH Keys
 - setup thunderbird
+- fix transmission (chown -R transmission: /folder/), or change systemd user
