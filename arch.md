@@ -26,6 +26,8 @@ connect <mac>
 
 ## Printing
 
+Via CUPS:
+
 @ localhost:631
 
 ## Radios on/off

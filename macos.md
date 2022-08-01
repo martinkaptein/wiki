@@ -23,3 +23,11 @@ brave-browser keepassxc iterm2 rectangle spotify mpv vlc basictex lulu musescore
 Intel Mac Brew: /usr/local/Cellar/
 
 Hosts ad blcking: /etc/hosts or /private/etc/hosts
+
+## CUPS Printing:
+
+```
+cupsctl WebInterface=yes
+```
+
+http://localhost:631
