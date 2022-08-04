@@ -42,3 +42,11 @@ rfkill (un)block all
 pacman -Syu -Syyu -R -Rs -Ss -Sc (clean cache) -Scc (aggressive) -U (user install, downgrade)
 /var/cache/pacman/pkg
 ```
+
+## Record audio
+
+If Pulseaudio record with:
+
+```
+parecord -r output.mp3
+```
