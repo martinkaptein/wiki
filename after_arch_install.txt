@@ -10,6 +10,8 @@
 - fix transmission (chown -R transmission: /folder/), or change systemd user
 - fish and fish_vi bindings
 - setup shell in /etc/passwd
+- setup /etc/hosts
+- copy xinitrc from /etc/X11... to home and modify it
 
 # Extra packages
 
