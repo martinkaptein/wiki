@@ -34,7 +34,7 @@ Restart: `systemctl restart networking`
 - certbot
 - python3-certbot-nginx
 - pandoc
-- texlive-base
+- groff/troff
 
 ### Nginx
 
@@ -235,6 +235,8 @@ server {
     }
 }
 ```
+
+Link to sites-enabled.
 
 Reload nginx.
 
