@@ -15,7 +15,7 @@
 
 # Extra packages
 
-texlive-core autorandr foomatic-db foomatic-db-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds gutenprint foomatic-db-gutenprint-ppds foomatic-db-engine zip unzip xdg-desktop-portal xdg-desktop-portal-gtk mp3splt gimp kdenlive audacity cronie
+texlive-core autorandr foomatic-db foomatic-db-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds gutenprint foomatic-db-gutenprint-ppds foomatic-db-engine zip unzip xdg-desktop-portal xdg-desktop-portal-gtk mp3splt gimp kdenlive audacity cronie marble
 
 
 enable and start services:
