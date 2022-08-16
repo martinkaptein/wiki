@@ -11,7 +11,7 @@
 - fish and fish_vi bindings
 - setup shell in /etc/passwd
 - setup /etc/hosts
-- copy xinitrc from /etc/X11... to home and modify it
+- copy xinitrc from /etc/X11... to home and modify it (add exec i3 to bottom)
 
 # Extra packages
 
