@@ -39,8 +39,12 @@ rfkill (un)block all
 ## Pacman
 
 ```
-pacman -Syu -Syyu -R -Rs -Ss -Sc (clean cache) -Scc (aggressive) -U (user install, downgrade)
+pacman -Syy (update database) -Syu (system update) -Syyu -Rns (safe, clean removal) -R (only remove one package) -Runs (use this for very clean removal) -Rs -Qi (query installed) -Ss -Sc (clean cache, remove uninstalled) -Scc (aggressive clean cache, remove cache of installed) -U (user install, downgrade) -Rcns (very aggressive remove - don't use) -Qdtq (view unused packages > remove with pacman -R $(pacman -Qdtq)) -Sw (download without installing>cache)
 /var/cache/pacman/pkg
+```
+
+```
+mkpkg -si (install local (AUR) package)
 ```
 
 ## Record audio
