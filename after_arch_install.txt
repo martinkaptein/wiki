@@ -3,7 +3,6 @@
 - TLP Config (/etc/tlp.conf) > (both) battery limit, charge limit between 65 and 70 (start/stop limit)
 - `tlp start`
 - UPower (/etc/upower.d) limit disccharge and set shutdown limit
-- SSH Config > Disable Passwd auth
 - Firefox hardening
 - SSH Keys
 - setup thunderbird
@@ -15,7 +14,7 @@
 
 # Extra packages
 
-texlive-core autorandr foomatic-db foomatic-db-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds gutenprint foomatic-db-gutenprint-ppds foomatic-db-engine zip unzip xdg-desktop-portal xdg-desktop-portal-gtk mp3splt gimp kdenlive audacity cronie marble inkscape musescore 
+texlive-core autorandr foomatic-db foomatic-db-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds gutenprint foomatic-db-gutenprint-ppds foomatic-db-engine zip unzip xdg-desktop-portal xdg-desktop-portal-gtk mp3splt gimp kdenlive audacity cronie marble inkscape musescore calibre
 
 
 enable and start services:
