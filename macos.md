@@ -5,7 +5,7 @@
 ### CLI
 
 ```
-fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick
+fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick testdisk
 ```
 
 ### Cask
