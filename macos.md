@@ -11,13 +11,13 @@ fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick t
 ### Cask
 
 ```
-brave-browser keepassxc iterm2 rectangle spotify mpv vlc basictex lulu musescore caffeine android-platform-tools aldente firefox thunderbird
+brave-browser keepassxc iterm2 rectangle mpv lulu musescore android-platform-tools aldente thunderbird
 ```
 
 ### Extra
 
 ```
-basictex firefox calibre
+basictex firefox calibre inkscape spotify
 ```
 
 ## Configure
