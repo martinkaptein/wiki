@@ -417,3 +417,17 @@ systemctl enable php7.4-fpm --now
 systemctl reload nginx
 ```
 Set data in admin panel @yourdomain.
+
+## Nextcloud fixes
+
+- PHP memory limit in /etc/php/7.4/fpm/php.ini
+- Nextcloud cron:
+
+```
+crontab -u www-data -e
+*/5  *  *  *  * php -f /var/www/nextcloud/cron.php
+```
+
+Check wiki for correct cron specs
+
+- PHP Env vars in /etc/php/7.4/fpm/pool.d/www.conf
