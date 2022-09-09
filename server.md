@@ -431,3 +431,62 @@ crontab -u www-data -e
 Check wiki for correct cron specs
 
 - PHP Env vars in /etc/php/7.4/fpm/pool.d/www.conf
+
+# Nginx WebDav server
+
+Have nginx, nginx-full, nginx-extras installed.
+
+Check with
+
+```
+if nginx -V 2>&1 | grep -qE "http_dav_module|http-dav-ext"; then echo "good to go :)"; else echo "missing dav module :("; fi
+```
+
+Point subdomain via DNS provider.
+
+Decide on folder (e.g. /var/sites/webdav)
+
+Own this folder with:
+
+```
+chown -R www-data:www-data /var/sites/webdav
+```
+
+Authentication:
+
+```
+htpasswd -c /etc/nginx/.htpasswd yourusername
+```
+
+Configure Nginx (as before):
+
+```
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    root /var/sites/webdav/;
+    index index.html;
+    server_name dav.yourdomain.com;
+
+    dav_methods PUT DELETE MKCOL COPY MOVE;
+    dav_ext_methods PROPFIND OPTIONS;
+    dav_access user:rw group:rw all:rw;
+    autoindex on;
+    #client_max_body_size 0;
+    create_full_put_path on;
+    client_body_temp_path /var/sites/webdav/tmp/;
+
+    auth_basic       "Hello World";
+    # The file containing authorized users
+    auth_basic_user_file    /etc/nginx/.htpasswd;
+    ssl_certificate /etc/letsencrypt/live/dav.yourdomain.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/dav.yourdomain.com/privkey.pem; # managed by Certbot
+}
+```
+
+Get the certificates with certbot.
+If you don't want an encrypted connection (not recommended), remove the entries ssl_cert and change port to 80 (removing ssl).
+
+```
+certbot --nginx
+```
