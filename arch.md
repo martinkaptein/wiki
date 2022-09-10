@@ -1,8 +1,16 @@
 # Arch notes
 
+## Time
+
+```
+timedatectl set-ntp true
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+hwclock --systohc
+```
+
 ## Sudo
 
-`/etc/sudoers`
+`visudo /etc/sudoers`
 
 ```
 username ALL=(ALL:ALL) ALL
@@ -10,7 +18,21 @@ username ALL=(ALL:ALL) ALL
 
 ## Wireless
 
-Use IWCTL
+Use IWCTL.
+
+/etc/systemd/network/5-internet.network
+
+```
+[Match]
+Name=*
+
+[Network]
+DHCP=yes
+IPv6PrivacyExtensions=true
+```
+
+Rest is set to defaults, see man page for more info.
+Reload systemd-network, systemd-resloved, iwd.
 
 ## Bluetooth
 
@@ -54,3 +76,12 @@ If Pulseaudio record with:
 ```
 parecord -r output.mp3
 ```
+
+## Pulseaudio Fixes
+
+Fix interference Bluetooth/Wlan:
+
+Edit /etc/pulse/daemon.conf:
+
+default-sample-rate = 48000
+avoid-resampling = yes
