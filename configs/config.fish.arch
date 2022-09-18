@@ -2,6 +2,7 @@ setxkbmap -option caps:swapescape
 set -Ux EDITOR nvim
 set -Ux VISUAL nvim
 set -Ux BROWSER firefox
+set -Ux RANGER_LOAD_DEFAULT_RC FALSE
 
 alias v="nvim"
 alias l="xbacklight -set"
@@ -13,3 +14,5 @@ alias dbpull="cp ~/pdb/pdbx.kdbx ~/pdb/bak/$(date "+%Y%m%d%H%M%Slocal"); rsync -
 alias dbpush="rsync -P root@martinkaptein.com:/root/pdb/pdbx.kdbx ~/pdb/bak/$(date "+%Y%m%d%H%M%Sremote"); rsync -P ~/pdb/pdbx.kdbx root@martinkaptein.com:/root/pdb/pdbx.kdbx"
 alias con="ssh root@martinkaptein.com"
 alias sc="systemctl"
+alias davpull="rsync -rP root@martinkaptein.com:/var/sites/dav ~/"
+alias davpush="rsync -rP ~/dav/ root@martinkaptein.com:/var/sites/dav/"

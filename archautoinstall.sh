@@ -66,16 +66,13 @@ cp wall/8.png ~/8.png
 #cp configs/tlp.conf /etc/tlp.conf
 #tlp start
 
-## PDBX init
+# Prepare dirs
 
-mkdir $HOME/pdb
-mkdir $HOME/pdb/bak
-
-# Prepare other dirs
-
-mkdir ~/arc
+mkdir ~/doc
+mkdir ~/doc/{arc,pic}
 mkdir ~/tmp
-mkdir ~/git
+mkdir ~/art
+mkdir ~/art/{mus,mov,pic}
 
 ## Bluetooth
 
@@ -84,7 +81,7 @@ sudo systemctl start bluetooth.service
 
 ## Finder Script
 
-sudo cp scripts/open.sh /usr/local/bin/fzfinder
+sudo cp scripts/fzfinder.sh /usr/local/bin/fzfinder
 sudo chmod +x /usr/local/bin/fzfinder
 
 ## END: Print things to manually take care of:
