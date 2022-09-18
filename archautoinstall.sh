@@ -14,8 +14,8 @@ sudo cat archlist.txt | xargs pacman -S --noconfirm
 
 ## xorg
 
-touch $HOME/.xinitrc
-echo 'exec i3' >> $HOME/.xinitrc
+#touch $HOME/.xinitrc
+#echo 'exec i3' >> $HOME/.xinitrc
 
 ## vim and nvim
 
