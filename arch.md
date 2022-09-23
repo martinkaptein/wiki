@@ -18,7 +18,7 @@ username ALL=(ALL:ALL) ALL
 
 ## Wireless
 
-Use IWCTL.
+Use IWCTL. Rely on systemd...
 
 /etc/systemd/network/5-internet.network
 
@@ -29,6 +29,10 @@ Name=*
 [Network]
 DHCP=yes
 IPv6PrivacyExtensions=true
+MulticastDNS=yes
+
+[Link]
+Multicast=yes
 ```
 
 Rest is set to defaults, see man page for more info.
@@ -44,6 +48,7 @@ power on
 scan on
 pair <mac>
 connect <mac>
+trust
 ```
 
 ## Printing

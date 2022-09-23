@@ -2,14 +2,6 @@
 
 mkdir $HOME/.config
 
-# Update pacman
-
-sudo pacman -Syyu --noconfirm
-
-# Install all required programs from list
-
-sudo cat archlist.txt | xargs pacman -S --noconfirm
-
 # Configure stuff
 
 ## xorg
@@ -36,21 +28,10 @@ echo 'fish' >> $HOME/.bashrc
 mkdir $HOME/.config/fish
 cp configs/config.fish.arch $HOME/.config/fish/config.fish
 
-## UFW
-
-sudo ufw enable
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-
 ## Alacritty
 
 mkdir ~/.config/alacritty
 cp configs/alacritty.yml ~/.config/alacritty/
-
-## Cups
-
-sudo systemctl enable cups.service
-sudo systemctl start cups.service
 
 ## i3
 
@@ -74,14 +55,5 @@ mkdir ~/tmp
 mkdir ~/art
 mkdir ~/art/{mus,mov,pic}
 
-## Bluetooth
-
-sudo systemctl enable bluetooth.service
-sudo systemctl start bluetooth.service
-
-## Finder Script
-
-sudo cp scripts/fzfinder.sh /usr/local/bin/fzfinder
-sudo chmod +x /usr/local/bin/fzfinder
 
 ## END: Print things to manually take care of:
