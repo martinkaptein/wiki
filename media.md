@@ -6,6 +6,12 @@
 
 `ffmpeg -ss 00:00:12 -to 00:03:43 -i input.mp4 -c copy ~/Downloads/output.mkv`
 
+### Watermark
+
+```
+ ffmpeg -i input.mp4 -i watermark.png -filter_complex "overlay=1500:1000" output.mp4
+```
+
 ### Concat:
 
 `ffmpeg -f concat -i list.txt -c copy output.mkv`
