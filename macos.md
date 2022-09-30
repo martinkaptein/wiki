@@ -5,13 +5,19 @@
 ### CLI
 
 ```
-fish gnupg git wget transmission-cli pandoc ffmpeg go yt-dlp fzf neovim imagemagick
+fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick testdisk
 ```
 
 ### Cask
 
 ```
-brave-browser keepassxc iterm2 rectangle spotify mpv vlc basictex lulu musescore caffeine android-platform-tools aldente firefox thunderbird
+brave-browser keepassxc iterm2 rectangle mpv lulu musescore android-platform-tools aldente thunderbird
+```
+
+### Extra
+
+```
+basictex firefox calibre inkscape spotify
 ```
 
 ## Configure
@@ -23,3 +29,11 @@ brave-browser keepassxc iterm2 rectangle spotify mpv vlc basictex lulu musescore
 Intel Mac Brew: /usr/local/Cellar/
 
 Hosts ad blcking: /etc/hosts or /private/etc/hosts
+
+## CUPS Printing:
+
+```
+cupsctl WebInterface=yes
+```
+
+http://localhost:631

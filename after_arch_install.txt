@@ -1,0 +1,31 @@
+# Todo after install
+
+- TLP Config (/etc/tlp.conf) > (both) battery limit, charge limit between 65 and 70 (start/stop limit)
+- `tlp start`
+- UPower (/etc/upower.d) limit disccharge and set shutdown limit
+- Firefox hardening
+- SSH Keys
+- setup thunderbird
+- fix transmission (chown -R transmission: /folder/), or change systemd user
+- fish and fish_vi bindings
+- setup shell in /etc/passwd
+- setup /etc/hosts
+- copy xinitrc from /etc/X11... to home and modify it (add exec i3 to bottom)
+
+# Extra packages
+
+texlive-core autorandr foomatic-db foomatic-db-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds gutenprint foomatic-db-gutenprint-ppds foomatic-db-engine zip unzip xdg-desktop-portal xdg-desktop-portal-gtk mp3splt gimp kdenlive audacity cronie marble inkscape musescore calibre
+
+
+enable and start services:
+- cronie
+
+
+Install snap?!
+
+/etc/hosts:
+
+
+127.0.0.1   localhost
+::1         localhost
+127.0.1.1   hostname.localdomain hostname
