@@ -90,3 +90,9 @@ Edit /etc/pulse/daemon.conf:
 
 default-sample-rate = 48000
 avoid-resampling = yes
+
+## Webcam
+
+```
+mpv /dev/video0 --profile=low-latency --untimed
+```
