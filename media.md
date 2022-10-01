@@ -12,6 +12,20 @@
  ffmpeg -i input.mp4 -i watermark.png -filter_complex "overlay=1500:1000" output.mp4
 ```
 
+### Reduce video size dramatically
+
+```
+ffmpeg -i input.mp4 -vcodec libx264 -crf 24 output.mp4
+```
+
+Higher CRF > lower filesize. Set until ~30.
+
+Divide pixels by 2:
+
+```
+ffmpeg -i $infile -vf "scale=iw/2:ih/2" $outfile
+```
+
 ### Concat:
 
 `ffmpeg -f concat -i list.txt -c copy output.mkv`

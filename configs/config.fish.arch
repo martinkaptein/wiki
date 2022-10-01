@@ -1,4 +1,5 @@
 setxkbmap -option caps:swapescape
+
 set -Ux EDITOR nvim
 set -Ux VISUAL nvim
 set -Ux BROWSER firefox
@@ -16,3 +17,10 @@ alias con="ssh root@martinkaptein.com"
 alias sc="systemctl"
 alias davpull="rsync -rP root@martinkaptein.com:/var/sites/dav ~/"
 alias davpush="rsync -rP ~/dav/ root@martinkaptein.com:/var/sites/dav/"
+
+# Start X at login
+if status is-login
+    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+        exec startx -- -keeptty
+    end
+end
