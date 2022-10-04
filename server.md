@@ -490,3 +490,11 @@ If you don't want an encrypted connection (not recommended), remove the entries 
 ```
 certbot --nginx
 ```
+
+## Troubleshoot
+
+Find out which port gets used (e.g. port 80):
+
+```
+netstat -plant | grep 80
+```
