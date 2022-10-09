@@ -30,6 +30,10 @@ Intel Mac Brew: /usr/local/Cellar/
 
 Hosts ad blcking: /etc/hosts or /private/etc/hosts
 
+```
+pmset -u haltlevel 25 haltremain 30
+```
+
 ## CUPS Printing:
 
 ```
