@@ -1,0 +1,75 @@
+# Find replace siteexample with your domain
+server {
+	gzip on;
+	root /var/sites/siteexample.com/public/;
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm index.nginx-debian.html;
+
+	server_name siteexample.com www.siteexample.com;
+
+	error_page 404 /404.html;
+
+	location = /404.html {
+	root /var/sites/siteexample.com/public/;
+	internal;
+	}
+	
+	if ($host = 'www.siteexample.com') {
+	        return 301 https://siteexample.com$request_uri;
+	}
+
+	location ~* \.(js|css|png|jpg|jpeg|gif|svg|ico|pdf|woff2)$ {
+	expires 7d;
+	add_header Cache-Control "public";
+	}
+	
+	location ~* \.(js|css|png|jpg|jpeg|gif|svg|ico|woff2)$ {
+	expires 33d;
+	}
+	
+	add_header Content-Security-Policy "default-src 'self' 'sha256-HE52nGYAuxVG6bOcvE5Tg1LGW3PsiAonN3nPK/hmRug=' *.youtube.com;";
+	add_header X-Frame-Options "SAMEORIGIN";
+	add_header X-XSS-Protection "1; mode=block";
+	add_header X-Content-Type-Options nosniff;
+	add_header 'Referrer-Policy' 'strict-origin';
+	add_header Strict-Transport-Security 'max-age=31536000; includeSubDomains; preload' always;
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/siteexample.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/siteexample.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
+}
+
+
+server {
+    if ($host = www.siteexample.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = siteexample.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+	listen 80 ;
+	listen [::]:80 ;
+
+	server_name siteexample.com www.siteexample.com;
+    return 404; # managed by Certbot
+
+
+
+
+}
