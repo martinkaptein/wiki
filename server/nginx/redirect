@@ -1,0 +1,26 @@
+# Find replace siteexample.com with your domain
+# Find replace targetsite.com with your target domain
+server {
+server_name siteexample.com www.siteexample.com
+
+listen [::]:443 http2 ssl;
+listen 443 http2 ssl;
+listen 80;
+listen [::]:80;
+
+if ($host  = 'www.siteexample.com') {
+return 301 https://targetsite.com$request_uri;
+}
+
+if ($host  = 'siteexample.com') {
+return 301 https://targetsite.com$request_uri;
+}
+
+ssl_certificate /etc/letsencrypt/live/siteexample.com/fullchain.pem; # managed by Certbot
+ssl_certificate_key /etc/letsencrypt/live/siteexample.com/privkey.pem; # managed by Certbot
+include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+
+
