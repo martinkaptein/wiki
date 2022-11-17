@@ -41,3 +41,16 @@ cupsctl WebInterface=yes
 ```
 
 http://localhost:631
+
+## Recording internal audio (and microphone)
+
+In Audio MIDI Setup:
+
+Multi-Output Device: BlackHole and External Headphones OR Speakers
+
+Aggregate Device: BlackHole and Microphone
+
+In sound settings set default output to Multi-Output and input to Aggregate.
+Check sound playback app accepts default settings.
+
+Record.
