@@ -5,19 +5,19 @@
 ### CLI
 
 ```
-fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick testdisk
+fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick testdisk blackhole-2ch
 ```
 
 ### Cask
 
 ```
-brave-browser keepassxc iterm2 rectangle mpv lulu musescore android-platform-tools aldente thunderbird alt-tab
+brave-browser keepassxc iterm2 rectangle mpv lulu musescore android-platform-tools aldente
 ```
 
 ### Extra
 
 ```
-basictex firefox calibre inkscape spotify
+basictex firefox calibre inkscape spotify thunderbird
 ```
 
 ## Configure
