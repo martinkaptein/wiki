@@ -88,6 +88,36 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
 -sOutputFile=output.pdf someBigFile.pdf
 ```
 
+Or (preferable):
+
+```
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
+-dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+```
+
+Set PDFSETTINGS to `/screen` for even lower file size.
+
+Another (more detailed) command to achieve something similar:
+
+```
+gs \
+                                   -q -dNOPAUSE -dBATCH -dSAFER \
+                                   -sDEVICE=pdfwrite \
+                                   -dCompatibilityLevel=1.4 \
+                                   -dPDFSETTINGS=/screen \
+                                   -dEmbedAllFonts=true -dSubsetFonts=true \
+                                   -dColorImageDownsampleType=/Bicubic \
+                                   -dColorImageResolution=144 \
+                                   -dGrayImageDownsampleType=/Bicubic \
+                                   -dGrayImageResolution=144 \
+                                   -dMonoImageDownsampleType=/Bicubic \
+                                   -dMonoImageResolution=144 \
+                                   -sOutputFile=output.pdf \
+                                   input.pdf
+```
+
+You can set the resolution to a lower one as well.
+
 # Prepare image for scan version using Imagemagick
 
 ```
