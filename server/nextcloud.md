@@ -152,7 +152,7 @@ Set data in admin panel @yourdomain.
 
 ```
 crontab -u www-data -e
-*/5  *  *  *  * php -f /var/www/nextcloud/cron.php
+*/5  *  *  *  * php -f /var/www/nextcloud/cron.php --define apc.enable_cli=1
 ```
 
 Check wiki for correct cron specs
@@ -161,7 +161,7 @@ Check wiki for correct cron specs
 
 # TODO after installation
 
-- Install neccessary apps (contacts, calendars, tasks, keeweb, news) and remove unneccessary.
+- Install neccessary apps (contacts, calendars, tasks, keeweb, news, notes) and remove unneccessary.
 - Import these things and upload pdb.
 - Setup external apps (optional).
 - dashboard/dark theme/background color
