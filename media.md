@@ -2,6 +2,12 @@
 
 ## FFMPEG
 
+### Minimize mp3 aggressively
+
+```
+ffmpeg -i input.mp3 -b:a 8k -ac 1 -ar 11025 -map a output.mp3
+```
+
 ### Cut video without reencoding:
 
 `ffmpeg -ss 00:00:12 -to 00:03:43 -i input.mp4 -c copy ~/Downloads/output.mkv`
@@ -9,7 +15,7 @@
 ### Watermark
 
 ```
- ffmpeg -i input.mp4 -i watermark.png -filter_complex "overlay=1500:1000" output.mp4
+ffmpeg -i input.mp4 -i watermark.png -filter_complex "overlay=1500:1000" output.mp4
 ```
 
 ### Reduce video size dramatically
