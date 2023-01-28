@@ -1,5 +1,7 @@
 # Server notes
 
+## List of software
+
 ## Fixes
 
 Nginx Systemctl reload
