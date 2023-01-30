@@ -2,6 +2,8 @@
 
 ## List of software
 
+`nginx screen certbot python3-certbot-nginx pandoc groff imagemagick transmission-cli`
+
 ## Fixes
 
 Nginx Systemctl reload

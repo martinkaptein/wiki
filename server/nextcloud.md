@@ -159,6 +159,12 @@ Check wiki for correct cron specs
 
 - PHP Env vars in /etc/php/7.4/fpm/pool.d/www.conf
 
+Uncomment env[HOSTNAME] ... and following lines.
+
+### Caching
+
+Install `php-apcu`. add `'memcache.local' => '\OC\Memcache\APCu',` to www/nextcloud/config.php.
+
 # TODO after installation
 
 - Install neccessary apps (contacts, calendars, tasks, keeweb, news, notes) and remove unneccessary.
