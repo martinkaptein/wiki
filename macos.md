@@ -5,7 +5,7 @@
 ### CLI
 
 ```
-fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick testdisk blackhole-2ch
+fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick testdisk blackhole-2ch fdupes
 ```
 
 ### Cask
@@ -54,3 +54,9 @@ In sound settings set default output to Multi-Output and input to Aggregate.
 Check sound playback app accepts default settings.
 
 Record.
+
+## Finding duplicates on MacOS
+
+`fdupes -r .`
+
+`fdupes -rdN .` will automatically preserve the first file instead of asking each time. -r = recursive, -d = delete, -N = preserve first, delete the rest.
