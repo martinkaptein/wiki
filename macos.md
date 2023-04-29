@@ -1,4 +1,4 @@
-# MacOS
+# MacOS Initialization
 
 ## Homebrew
 
@@ -11,7 +11,7 @@ fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick t
 ### Cask
 
 ```
-brave-browser keepassxc iterm2 rectangle mpv lulu musescore android-platform-tools aldente nextcloud
+brave-browser keepassxc iterm2 rectangle mpv musescore android-platform-tools aldente nextcloud
 ```
 
 ### Extra
@@ -28,35 +28,46 @@ basictex firefox calibre inkscape spotify thunderbird
 
 Intel Mac Brew: /usr/local/Cellar/
 
-Hosts ad blcking: /etc/hosts or /private/etc/hosts
-
 ```
 pmset -u haltlevel 25 haltremain 30
 ```
 
-## CUPS Printing:
+### Privacy
+
+Add following to Hosts (`/private/etc/hosts`) to restrict Apple:
 
 ```
-cupsctl WebInterface=yes
+0.0.0.0 googlesyndication.com
+0.0.0.0 doubleclick.net
+0.0.0.0 mesu.apple.com
+0.0.0.0 google-analytics.com
+0.0.0.0 gdmf.apple.com
+0.0.0.0 xp.apple.com
+0.0.0.0 updates.g.aaplimg.com
+0.0.0.0 updates.cdn-apple.com
+0.0.0.0 appldnld.apple.com
+0.0.0.0 configuration.apple.com
+0.0.0.0 gg.apple.com
+0.0.0.0 gs.apple.com
+0.0.0.0 ig.apple.com
+0.0.0.0 oscdn.apple.com
+0.0.0.0 osrecovery.apple.com
+0.0.0.0 skl.apple.com
+0.0.0.0 swcdn.apple.com
+0.0.0.0 swdist.apple.com
+0.0.0.0 swdownload.apple.com
+0.0.0.0 swscan.apple.com
+0.0.0.0 updates-http.cdn-apple.com
+0.0.0.0 updates.cdn-apple.com
+0.0.0.0 xp-cdn.apple.com
+0.0.0.0 cssubmissions.apple.com
+0.0.0.0 diagassets.apple.com
+0.0.0.0 guzzoni.apple.com
+0.0.0.0 phonesubmissions.apple.com
 ```
 
-http://localhost:631
+Official source:
 
-## Recording internal audio (and microphone)
+https://support.apple.com/en-us/HT210060
 
-In Audio MIDI Setup:
-
-Multi-Output Device: BlackHole and External Headphones OR Speakers
-
-Aggregate Device: BlackHole and Microphone
-
-In sound settings set default output to Multi-Output and input to Aggregate.
-Check sound playback app accepts default settings.
-
-Record.
-
-## Finding duplicates on MacOS
-
-`fdupes -r .`
-
-`fdupes -rdN .` will automatically preserve the first file instead of asking each time. -r = recursive, -d = delete, -N = preserve first, delete the rest.
+Flush DNS cache `sudo killall -HUP mDNSResponder`.
