@@ -71,3 +71,5 @@ Official source:
 https://support.apple.com/en-us/HT210060
 
 Flush DNS cache `sudo killall -HUP mDNSResponder`.
+
+Get the full adblock host file from [here](https://github.com/StevenBlack/hosts).
