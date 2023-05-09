@@ -1,0 +1,32 @@
+||googlesyndication.com^$important
+||doubleclick.net^$important
+||mesu.apple.com^$important
+||google-analytics.com^$important
+||gdmf.apple.com^$important
+||xp.apple.com^$important
+||updates.g.aaplimg.com^$important
+||updates.cdn-apple.com^$important
+||dorico.com^$important
+||steinberg.net^$important
+||api-adservices.apple.com^$important
+||akamaized.net^$important
+||scdn.co^$important
+||fastly.net^$important
+||bloodhound.spotify.com^$important
+||gdmf.v.aaplimg.com^$important
+
+# Begin copy host file
+
+# End copy host file
+
+# Optional bellow, very strict to apple
+||aaplimg.com^$important
+||apple.com^$important
+||icloud.com^$important
+||cdn-apple.com^$important
+||mzstatic.com^$important
+||edgesuite.net^$important
+||apple-cloudkit.com^$important
+||digicert.com^$important
+||digicert.cn^$important
+||entrust.net^$important
