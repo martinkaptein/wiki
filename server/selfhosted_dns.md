@@ -88,7 +88,7 @@ sudo networksetup -setdnsservers Wi-Fi ip.adr.here.0 optional.secondary.0.0
 Fallback:
 
 ```
-networksetup -setdnsservers Wi-Fi
+networksetup -setdnsservers Wi-Fi empty
 ```
 
 Verify:
