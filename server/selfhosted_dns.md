@@ -16,7 +16,7 @@ nameserver 8.8.8.8
 
 Import hosts adblock in /etc/hosts, plus custom records.
 
-Optionally copy the contents of `dnsmasq_wild...` over into /etc/dnsmasq.conf.
+Optionally copy the contents of `dnsmasq_wild...` over into /etc/dnsmasq.d/custom.conf.
 This way you can set up very strict wildcard domain blocking.
 
 ## Nginx DoT

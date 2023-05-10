@@ -1,3 +1,9 @@
+0.0.0.0 google-analytics.com
+0.0.0.0 scorecardresearch.com
+0.0.0.0 fastly.net
+0.0.0.0 doubleclick.net
+0.0.0.0 googlesyndication.com
+0.0.0.0 dit.whatsapp.net
 0.0.0.0 googlesyndication.com
 0.0.0.0 doubleclick.net
 0.0.0.0 mesu.apple.com
@@ -5,7 +11,6 @@
 0.0.0.0 gdmf.apple.com
 0.0.0.0 xp.apple.com
 0.0.0.0 updates.g.aaplimg.com
-0.0.0.0 updates.cdn-apple.com
 0.0.0.0 appldnld.apple.com
 0.0.0.0 configuration.apple.com
 0.0.0.0 gg.apple.com
