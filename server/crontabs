@@ -1,4 +1,0 @@
-1 1 1 * * certbot renew
-2 7 * * 1 tar -czf /root/rad/radicale_$(date "+\%Y\%m\%d").tar.gz /var/lib/radicale/collections/
-2 8 * * 1 tar -czf /root/dav/dav_$(date "+\%Y\%m\%d").tar.gz /var/sites/dav/
-3 9 * * 1 cd /root/git/tigers && git pull && cd /root/git/scriabinclub.com && git pull && hugo && cp -r public /var/sites/scriabinclub.com/ && cd /root/git/martinkaptein.com && git pull && hugo && cp     -r public /var/sites/martinkaptein.com/ && cd

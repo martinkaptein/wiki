@@ -1,0 +1,10 @@
+address=/aaplimg.com/0.0.0.0
+address=/apple.com/0.0.0.0
+address=/icloud.com/0.0.0.0
+address=/cdn-apple.com/0.0.0.0
+address=/mzstatic.com/0.0.0.0
+address=/edgesuite.net/0.0.0.0
+address=/apple-cloudkit.com/0.0.0.0
+address=/digicert.com/0.0.0.0
+address=/digicert.cn/0.0.0.0
+address=/entrust.net/0.0.0.0

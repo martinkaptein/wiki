@@ -1,0 +1,5 @@
+address=/google-analytics.com/0.0.0.0
+address=/scorecardresearch.com/0.0.0.0
+address=/fastly.net/0.0.0.0
+address=/doubleclick.net/0.0.0.0
+address=/googlesyndication.com/0.0.0.0

@@ -152,6 +152,8 @@ Set data in admin panel @yourdomain.
 
 ```
 crontab -u www-data -e
+```
+```
 */5  *  *  *  * php -f /var/www/nextcloud/cron.php --define apc.enable_cli=1
 ```
 
