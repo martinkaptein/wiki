@@ -16,6 +16,12 @@ nameserver 8.8.8.8
 
 Import hosts adblock in /etc/hosts, plus custom records.
 
+Alternatively convert a hosts adblock file to dnsmasq format:
+
+```
+wget -O- https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts | awk '$1 == "0.0.0.0" { print "address=/"$2"/0.0.0.0/"}' > /etc/dnsmasq.d/malware.conf
+```
+
 Optionally copy the contents of `dnsmasq_wild...` over into /etc/dnsmasq.d/custom.conf.
 This way you can set up very strict wildcard domain blocking.
 
