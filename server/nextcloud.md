@@ -163,6 +163,12 @@ Check wiki for correct cron specs
 
 Uncomment env[HOSTNAME] ... and following lines.
 
+Add to header section in the nginx config:
+
+```
+add_header X-Robots-Tag "noindex, nofollow" always;
+```
+
 ### Caching
 
 Install `php-apcu`. add `'memcache.local' => '\OC\Memcache\APCu',` to www/nextcloud/config.php.
@@ -173,3 +179,4 @@ Install `php-apcu`. add `'memcache.local' => '\OC\Memcache\APCu',` to www/nextcl
 - Import these things and upload pdb.
 - Setup external apps (optional).
 - dashboard/dark theme/background color
+- customize background and logo (currently: in nextcloud/core/img/)
