@@ -34,7 +34,7 @@ pmset -u haltlevel 25 haltremain 30
 
 ### Privacy
 
-Add to Hosts (`/private/etc/hosts`) to restrict Apple from server/host_additions:
+Add to Hosts (`/private/etc/hosts`) to restrict Apple from `server/host_additions:`
 
 Official source:
 

@@ -163,7 +163,7 @@ Check wiki for correct cron specs
 
 Uncomment env[HOSTNAME] ... and following lines.
 
-Add to header section in the nginx config:
+Add to header section in the nginx config (replacing the other Robots header):
 
 ```
 add_header X-Robots-Tag "noindex, nofollow" always;
@@ -172,6 +172,12 @@ add_header X-Robots-Tag "noindex, nofollow" always;
 ### Caching
 
 Install `php-apcu`. add `'memcache.local' => '\OC\Memcache\APCu',` to www/nextcloud/config.php.
+
+```
+alias occ="sudo -u 'www-data' /var/www/nextcloud/occ"
+```
+
+In the shell.
 
 # TODO after installation
 
