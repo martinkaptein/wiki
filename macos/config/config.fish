@@ -6,5 +6,7 @@ if status is-interactive
     alias con='ssh root@sonata8.com'
     alias tsm="transmission-remote"
     alias so='caffeinate -d'
+    alias gis='git status'
+    alias gap='git add -A && git commit -a -m "default commit message" && git push'
 end
 
