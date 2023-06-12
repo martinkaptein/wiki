@@ -7,6 +7,8 @@ if status is-interactive
     alias tsm="transmission-remote"
     alias so='caffeinate -d'
     alias gis='git status'
+    alias gip='git pull'
     alias gap='git add -A && git commit -a -m "default commit message" && git push'
+    alias gid='git diff'
 end
 

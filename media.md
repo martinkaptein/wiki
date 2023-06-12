@@ -15,8 +15,10 @@ ffmpeg -i input.mp3 -b:a 8k -ac 1 -ar 11025 -map a output.mp3
 ### Watermark
 
 ```
-ffmpeg -i input.mp4 -i watermark.png -filter_complex "overlay=1500:1000" output.mp4
+ffmpeg -i input.mp4 -i watermark.png -filter_complex "overlay=1220:690" output.mp4
 ```
+
+Example shown for a 60x30 png, for a 720p video (1280x720) in the lower right corner.
 
 ### Reduce video size dramatically
 
