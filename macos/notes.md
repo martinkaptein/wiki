@@ -3,7 +3,7 @@
 ## Hosts
 
 Edit as admin `/private/etc/hosts`.
-Flush DNS cache `sudo killall -HUP mDNSResponder`.
+Flush DNS cache `sudo killall -HUP mDNSResponder`, `dscacheutil -flushcache`.
 
 ## CUPS Printing:
 
