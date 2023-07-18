@@ -1,0 +1,108 @@
+= Document Title
+Author Name <author@email.org>; Another Author <a.author@email.com>
+v2.0, 2019-03-22
+:toc:
+:toc-title: Title of Table of Content
+:homepage: https://example.org
+:doctype: article
+
+<<<
+
+== Level 1 Section Title
+
+=== Level 2 Section Title
+
+Unordered List:
+
+* List item
+** Nested list item
+*** Deeper nested list item
+
+Ordered list:
+
+. Step 1
+. Step 2
+.. Step 2a
+.. Step 2b
+
+First term:: The description can be placed on the same line
+as the term.
+
+.In Amsterdam
+[#image-id,caption="Captie :",link=https://sonata8.com/]
+image::ams.jpg[AltText,200,200]
+
+////
+This is a long comment
+////
+
+[quote,Albert Einstein]
+A person who never made a mistake never tried anything new.
+
+`+code+` in the middle of a sentence.
+
+....
+Long
+code
+block
+....
+
+.Code Block with title
+----
+Code
+Block
+with
+title
+----
+
+
+.Table Title
+|===
+|Column 1, Header Row |Column 2, Header Row
+
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|===
+
+.Applications
+[cols="1,1,2"]
+|===
+|Name |Category |Description
+
+|Firefox
+|Browser
+|Mozilla Firefox is an open source web browser.
+It's designed for standards compliance,
+performance, portability.
+
+|Arquillian
+|Testing
+|An innovative and highly extensible testing platform.
+Empowers developers to easily create real, automated tests.
+|===
+
+A statement.footnote:[Clarification about this statement.]
+
+_The Pragmatic Programmer_ <<pp>> should be required reading for all developers.
+To learn all about design patterns, refer to the book by the "`Gang of Four`" <<gof>>.
+
+^super^script phrase
+
+~sub~script phrase
+
+Horizontal rule:
+
+'''
+
+[bibliography]
+== References
+
+* [[[pp]]] Andy Hunt & Dave Thomas. The Pragmatic Programmer:
+From Journeyman to Master. Addison-Wesley. 1999.
+* [[[gof,gang]]] Erich Gamma, Richard Helm, Ralph Johnson & John Vlissides.
+Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley. 1994.
+
+
