@@ -5,6 +5,12 @@ v2.0, 2019-03-22
 :toc-title: Title of Table of Content
 :homepage: https://example.org
 :doctype: article
+////
+Have hard breaks by default:
+:hardbreaks-option:
+For only a paragraph:
+[%hardbreaks]
+////
 
 <<<
 
