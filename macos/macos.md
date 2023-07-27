@@ -11,7 +11,7 @@ fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick t
 ### Cask
 
 ```
-brave-browser keepassxc iterm2 rectangle mpv musescore android-platform-tools aldente nextcloud
+brave-browser keepassxc iterm2 rectangle mpv musescore android-platform-tools aldente nextcloud alt-tab
 ```
 
 ### Extra
