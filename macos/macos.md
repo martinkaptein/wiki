@@ -5,7 +5,7 @@
 ### CLI
 
 ```
-fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick testdisk blackhole-2ch fdupes
+fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick testdisk blackhole-2ch fdupes asciidoc asciidoctor
 ```
 
 ### Cask
