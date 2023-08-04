@@ -19,7 +19,7 @@ brave-browser keepassxc iterm2 rectangle mpv musescore android-platform-tools al
 Choose what you need.
 
 ```
-basictex firefox calibre inkscape spotify thunderbird go groff onlyoffice
+basictex firefox calibre inkscape spotify thunderbird go groff onlyoffice vlc
 ```
 
 ## Configure
