@@ -5,7 +5,7 @@
 ### CLI
 
 ```
-fish git transmission-cli pandoc ffmpeg go yt-dlp fzf neovim groff imagemagick testdisk blackhole-2ch fdupes asciidoc asciidoctor
+fish git transmission-cli pandoc ffmpeg yt-dlp fzf neovim imagemagick testdisk blackhole-2ch fdupes wkhtml2pdf
 ```
 
 ### Cask
@@ -16,11 +16,15 @@ brave-browser keepassxc iterm2 rectangle mpv musescore android-platform-tools al
 
 ### Extra
 
+Choose what you need.
+
 ```
-basictex firefox calibre inkscape spotify thunderbird
+basictex firefox calibre inkscape spotify thunderbird go groff onlyoffice
 ```
 
 ## Configure
+
+Use init script.
 
 `brew analytics off`
 
