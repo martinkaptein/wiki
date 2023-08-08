@@ -11,7 +11,7 @@ if status is-interactive
     alias gap='git add -A && git commit -a -m "default commit message" && git push'
     alias gid='git diff'
     alias texpdf='pandoc --pdf-engine=xelatex -V mainfont="Sofia Sans Light" -o'
-    alias csspdf='pandoc -t html5 --css ~/.pandoc/pandoc.css -s --pdf-engine=wkhtmltopdf -o'
+    alias csspdf='pandoc -t html5 --css ~/.pandoc/pandoc.css --embed-resource --standalone --pdf-engine=wkhtmltopdf -o'
 
 end
 
