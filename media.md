@@ -34,6 +34,12 @@ Divide pixels by 2:
 ffmpeg -i $infile -vf "scale=iw/2:ih/2" $outfile
 ```
 
+Scaling video to 720p:
+
+```
+ffmpeg -i MyMovie.mkv -vf scale=-1:720 output.mp4
+```
+
 ### Concat:
 
 `ffmpeg -f concat -i list.txt -c copy output.mkv`
