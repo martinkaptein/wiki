@@ -10,10 +10,18 @@ server {
 
 	error_page 404 /404.html;
 
-	location = /404.html {
-	root /var/sites/siteexample.com/public/;
-	internal;
-	}
+	#location = /404.html {
+	#root /var/sites/siteexample.com/public/;
+	#internal;
+	#}
+	#
+	#If you need to permanently redirect part of path, e.g. example.com/blog/* -> example.com/post/*
+	#rewrite ^/blog/(.*)$ /post/$1 permanent;
+	#
+	#For specific page redirects use this
+	#location ~* "^/music/" {
+	#return 301 /piano/;
+ 	#}
 	
 	if ($host = 'www.siteexample.com') {
 	        return 301 https://siteexample.com$request_uri;
